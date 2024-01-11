@@ -6,7 +6,7 @@
 #    By: hzibari <hzibari@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 14:33:04 by hzibari           #+#    #+#              #
-#    Updated: 2023/11/20 14:48:26 by hzibari          ###   ########.fr        #
+#    Updated: 2023/12/22 11:58:09 by hzibari          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ CC		=	cc
 RM		=	-rm -f
 CFLAGS	=	-Wall -Wextra -Werror
 
-NAME	=	libftprintf.a
+NAME	=	printf.a
 
 LIBDR = libft
 LIBNM = libft.a
@@ -42,10 +42,11 @@ libft:
 
 clean:
 	$(RM) $(OFILES)
-	@make -C $(LIBDR) fclean
+	@make -C $(LIBDR) clean
 
 fclean: clean
 	$(RM) $(NAME)
+	@make -C $(LIBDR) fclean
 
 re: fclean $(NAME)
 
